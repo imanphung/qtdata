@@ -1,0 +1,12 @@
+2020-09-16 21:58:14 WARNING Cannot capture images!
+2020-09-16 21:58:14 WARNING Traceback (most recent call last):
+  File "<ipython-input-5-2396f77b868e>", line 34, in <module>
+    frame_b64 = encode_b64(frame)
+NameError: name 'encode_b64' is not defined
+
+2020-09-16 22:35:14 WARNING Cannot capture images!
+2020-09-16 22:35:14 WARNING Traceback (most recent call last):
+  File "<ipython-input-3-b2c9384ed0fb>", line 35, in snapshot
+    frame_b64 = encode_b64(frame)
+NameError: name 'encode_b64' is not defined
+

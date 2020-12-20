@@ -1,0 +1,17 @@
+==========================================================
+					Import MarketData
+==========================================================
+1. Connect to mysql (via localhost)
+mysql -u root -p
+2. Create User
+CREATE USER 'QT_WEB'@'%' IDENTIFIED BY 'qtdata@2020';
+3. Grant permissions
+GRANT ALL PRIVILEGES ON *.* TO 'QT_WEB'@'%' WITH GRANT OPTION;
+4. Flush privileges
+FLUSH PRIVILEGES;
+
+Add a database called CMTDB, enter:
+CREATE DATABASE CMTDB;
+
+	
+	

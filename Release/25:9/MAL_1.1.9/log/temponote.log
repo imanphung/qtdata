@@ -1,0 +1,158 @@
+2020-11-02 07:41:49 WARNING Traceback (most recent call last):
+  File "/Users/phungan/Documents/QTData/Release/25:9/MAL_1.1.9/lib/lib_hr.py", line 585, in get_image
+    path_files = path_username +'{}_{}.gif'.format(filename, date)
+UnboundLocalError: local variable 'filename' referenced before assignment
+
+2020-11-02 07:41:49 WARNING View in output directory
+2020-11-02 07:41:49 WARNING Traceback (most recent call last):
+  File "./debugger.py", line 63, in run_popup_debugger
+    result += '{}'.format(eval('{}'.format(cmd)))
+  File "<string>", line 1, in <module>
+  File "/Users/phungan/Documents/QTData/Release/25:9/MAL_1.1.9/lib/lib_hr.py", line 605, in get_image
+    return path_files
+UnboundLocalError: local variable 'path_files' referenced before assignment
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/phungan/Documents/QTData/Release/25:9/MAL_1.1.9/lib/lib_hr.py", line 585, in get_image
+    path_files = path_username +'{}_{}.gif'.format(filename, date)
+UnboundLocalError: local variable 'filename' referenced before assignment
+
+2020-11-02 07:41:49 WARNING View in output directory
+2020-11-02 07:42:16 WARNING Traceback (most recent call last):
+  File "/Users/phungan/Documents/QTData/Release/25:9/MAL_1.1.9/lib/lib_hr.py", line 585, in get_image
+    path_files = path_username +'{}_{}.gif'.format(filename, date)
+UnboundLocalError: local variable 'filename' referenced before assignment
+
+2020-11-02 07:42:16 WARNING View in output directory
+2020-11-02 07:42:17 WARNING Traceback (most recent call last):
+  File "./debugger.py", line 63, in run_popup_debugger
+    result += '{}'.format(eval('{}'.format(cmd)))
+  File "<string>", line 1, in <module>
+  File "/Users/phungan/Documents/QTData/Release/25:9/MAL_1.1.9/lib/lib_hr.py", line 605, in get_image
+    return path_files
+UnboundLocalError: local variable 'path_files' referenced before assignment
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/phungan/Documents/QTData/Release/25:9/MAL_1.1.9/lib/lib_hr.py", line 585, in get_image
+    path_files = path_username +'{}_{}.gif'.format(filename, date)
+UnboundLocalError: local variable 'filename' referenced before assignment
+
+2020-11-02 07:42:17 WARNING View in output directory
+2020-11-02 07:42:37 WARNING Traceback (most recent call last):
+  File "/Users/phungan/Documents/QTData/Release/25:9/MAL_1.1.9/lib/lib_hr.py", line 585, in get_image
+    path_files = path_username +'{}_{}.gif'.format(filename, date)
+UnboundLocalError: local variable 'filename' referenced before assignment
+
+2020-11-02 07:42:37 WARNING View in output directory
+2020-11-02 07:42:37 WARNING Traceback (most recent call last):
+  File "./debugger.py", line 63, in run_popup_debugger
+    result += '{}'.format(eval('{}'.format(cmd)))
+  File "<string>", line 1, in <module>
+  File "/Users/phungan/Documents/QTData/Release/25:9/MAL_1.1.9/lib/lib_hr.py", line 605, in get_image
+    return path_files
+UnboundLocalError: local variable 'path_files' referenced before assignment
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/phungan/Documents/QTData/Release/25:9/MAL_1.1.9/lib/lib_hr.py", line 585, in get_image
+    path_files = path_username +'{}_{}.gif'.format(filename, date)
+UnboundLocalError: local variable 'filename' referenced before assignment
+
+2020-11-02 07:42:37 WARNING View in output directory
+2020-11-02 07:43:24 WARNING Traceback (most recent call last):
+  File "/Users/phungan/Documents/QTData/Release/25:9/MAL_1.1.9/lib/lib_hr.py", line 585, in get_image
+    path_files = path_username +'{}_{}.gif'.format(filename, date)
+UnboundLocalError: local variable 'filename' referenced before assignment
+
+2020-11-02 07:43:24 WARNING View in output directory
+2020-11-02 07:43:27 WARNING Traceback (most recent call last):
+  File "./debugger.py", line 63, in run_popup_debugger
+    result += '{}'.format(eval('{}'.format(cmd)))
+  File "<string>", line 1, in <module>
+  File "/Users/phungan/Documents/QTData/Release/25:9/MAL_1.1.9/lib/lib_hr.py", line 605, in get_image
+    return path_files
+UnboundLocalError: local variable 'path_files' referenced before assignment
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/phungan/Documents/QTData/Release/25:9/MAL_1.1.9/lib/lib_hr.py", line 585, in get_image
+    path_files = path_username +'{}_{}.gif'.format(filename, date)
+UnboundLocalError: local variable 'filename' referenced before assignment
+
+2020-11-02 07:43:27 WARNING View in output directory
+2020-11-02 08:09:18 WARNING Traceback (most recent call last):
+  File "/Users/phungan/Documents/QTData/Release/25:9/MAL_1.1.9/lib/lib_hr.py", line 586, in get_image
+    with imageio.get_writer(path_username +'{}_{}.gif'.format(filename, date), mode='I', fps=5) as writer_screen:
+UnboundLocalError: local variable 'filename' referenced before assignment
+
+2020-11-02 08:09:18 WARNING View in output directory
+2020-11-02 08:09:18 WARNING Traceback (most recent call last):
+  File "./debugger.py", line 63, in run_popup_debugger
+    result += '{}'.format(eval('{}'.format(cmd)))
+  File "<string>", line 1, in <module>
+  File "/Users/phungan/Documents/QTData/Release/25:9/MAL_1.1.9/lib/lib_hr.py", line 605, in get_image
+    return path_files
+NameError: name 'path_files' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/phungan/Documents/QTData/Release/25:9/MAL_1.1.9/lib/lib_hr.py", line 586, in get_image
+    with imageio.get_writer(path_username +'{}_{}.gif'.format(filename, date), mode='I', fps=5) as writer_screen:
+UnboundLocalError: local variable 'filename' referenced before assignment
+
+2020-11-02 08:09:18 WARNING View in output directory
+2020-11-02 08:12:18 WARNING Traceback (most recent call last):
+  File "/Users/phungan/Documents/QTData/Release/25:9/MAL_1.1.9/lib/lib_hr.py", line 586, in get_image
+    with imageio.get_writer(path_username +'{}_{}.gif'.format(filename, date), mode='I', fps=5) as writer_screen:
+UnboundLocalError: local variable 'filename' referenced before assignment
+
+2020-11-02 08:12:18 WARNING View in output directory
+2020-11-02 08:14:07 WARNING Traceback (most recent call last):
+  File "/Users/phungan/Documents/QTData/Release/25:9/MAL_1.1.9/lib/lib_hr.py", line 586, in get_image
+    with imageio.get_writer(path_username +'{}_{}.gif'.format(filename, date), mode='I', fps=5) as writer_screen:
+UnboundLocalError: local variable 'filename' referenced before assignment
+
+2020-11-02 08:14:07 WARNING View in output directory
+2020-11-02 08:15:00 WARNING Traceback (most recent call last):
+  File "/Users/phungan/Documents/QTData/Release/25:9/MAL_1.1.9/lib/lib_hr.py", line 586, in get_image
+    with imageio.get_writer(path_username +'{}_{}.gif'.format(filename, date), mode='I', fps=5) as writer_screen:
+UnboundLocalError: local variable 'filename' referenced before assignment
+
+2020-11-02 08:15:00 WARNING View in output directory
+2020-11-02 11:43:59 WARNING Traceback (most recent call last):
+  File "/Users/phungan/Documents/QTData/Release/25:9/MAL_1.1.9/lib/lib_hr.py", line 586, in get_image
+    with imageio.get_writer(path +'{}_{}.gif'.format(filename, date), mode='I', fps=5) as writer_screen:
+UnboundLocalError: local variable 'filename' referenced before assignment
+
+2020-11-02 11:43:59 WARNING View in output directory
+2020-11-03 15:56:51 WARNING Cannot capture images!
+2020-11-03 15:56:51 WARNING Traceback (most recent call last):
+  File "<ipython-input-3-86c1ebdc0623>", line 28, in snapshot
+    frame_b64 = encode_b64(frame)
+NameError: name 'encode_b64' is not defined
+
+2020-11-03 15:58:40 WARNING Cannot capture images!
+2020-11-03 15:58:40 WARNING Traceback (most recent call last):
+  File "<ipython-input-10-df77f45288b1>", line 28, in snapshot
+    frame_b64 = encode_b64(frame)
+NameError: name 'encode_b64' is not defined
+
+2020-11-03 16:01:24 WARNING Cannot capture images!
+2020-11-03 16:01:24 WARNING Traceback (most recent call last):
+  File "<ipython-input-15-df77f45288b1>", line 28, in snapshot
+    frame_b64 = encode_b64(frame)
+NameError: name 'encode_b64' is not defined
+
+2020-11-10 07:54:29 WARNING Cannot capture images!
+2020-11-10 07:54:29 WARNING Traceback (most recent call last):
+  File "<ipython-input-9-8f4eaca14b2d>", line 30, in snapshot
+    frame_b64 = encode_b64(frame)
+NameError: name 'encode_b64' is not defined
+

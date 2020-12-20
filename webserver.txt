@@ -1,0 +1,4 @@
+1 Config apache + nginx:
+https://support.maxserver.com/530905-H%C6%B0%E1%BB%9Bng-d%E1%BA%ABn-c%C3%A0i-%C4%91%E1%BA%B7t-Nginx-l%C3%A0m-proxy-cho-Apache-tr%C3%AAn-Ubuntu-14
+2. Config DIR in Apache:
+/etc/apache2/mods-available/dir.conf 

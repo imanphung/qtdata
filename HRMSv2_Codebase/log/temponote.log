@@ -1,0 +1,50 @@
+2020-09-02 16:01:38 WARNING Traceback (most recent call last):
+  File "./popup_tempo.py", line 155, in run_popup_note
+    window = create_window_note()
+  File "./popup_tempo.py", line 136, in create_window_note
+    size=(screen_size[0],screen_size[1])
+  File "/opt/anaconda3/lib/python3.7/site-packages/PySimpleGUI/PySimpleGUI.py", line 6655, in __init__
+    self.Finalize()
+  File "/opt/anaconda3/lib/python3.7/site-packages/PySimpleGUI/PySimpleGUI.py", line 7167, in Finalize
+    self.Read(timeout=1)
+  File "/opt/anaconda3/lib/python3.7/site-packages/PySimpleGUI/PySimpleGUI.py", line 6992, in Read
+    results = self._read(timeout=timeout, timeout_key=timeout_key)
+  File "/opt/anaconda3/lib/python3.7/site-packages/PySimpleGUI/PySimpleGUI.py", line 7030, in _read
+    self._Show()
+  File "/opt/anaconda3/lib/python3.7/site-packages/PySimpleGUI/PySimpleGUI.py", line 6866, in _Show
+    StartupTK(self)
+  File "/opt/anaconda3/lib/python3.7/site-packages/PySimpleGUI/PySimpleGUI.py", line 11296, in StartupTK
+    ConvertFlexToTK(my_flex_form)
+  File "/opt/anaconda3/lib/python3.7/site-packages/PySimpleGUI/PySimpleGUI.py", line 11200, in ConvertFlexToTK
+    MyFlexForm.TKroot.configure(padx=MyFlexForm.Margins[0], pady=MyFlexForm.Margins[1])
+  File "/opt/anaconda3/lib/python3.7/tkinter/__init__.py", line 1485, in configure
+    return self._configure('configure', cnf, kw)
+  File "/opt/anaconda3/lib/python3.7/tkinter/__init__.py", line 1476, in _configure
+    self.tk.call(_flatten((self._w, cmd)) + self._options(cnf))
+_tkinter.TclError: bad screen distance "a"
+
+2020-09-02 16:02:08 WARNING Traceback (most recent call last):
+  File "./popup_tempo.py", line 155, in run_popup_note
+    window = create_window_note()
+  File "./popup_tempo.py", line 136, in create_window_note
+    size=(screen_size[0],screen_size[1])
+  File "/opt/anaconda3/lib/python3.7/site-packages/PySimpleGUI/PySimpleGUI.py", line 6655, in __init__
+    self.Finalize()
+  File "/opt/anaconda3/lib/python3.7/site-packages/PySimpleGUI/PySimpleGUI.py", line 7167, in Finalize
+    self.Read(timeout=1)
+  File "/opt/anaconda3/lib/python3.7/site-packages/PySimpleGUI/PySimpleGUI.py", line 6992, in Read
+    results = self._read(timeout=timeout, timeout_key=timeout_key)
+  File "/opt/anaconda3/lib/python3.7/site-packages/PySimpleGUI/PySimpleGUI.py", line 7030, in _read
+    self._Show()
+  File "/opt/anaconda3/lib/python3.7/site-packages/PySimpleGUI/PySimpleGUI.py", line 6866, in _Show
+    StartupTK(self)
+  File "/opt/anaconda3/lib/python3.7/site-packages/PySimpleGUI/PySimpleGUI.py", line 11296, in StartupTK
+    ConvertFlexToTK(my_flex_form)
+  File "/opt/anaconda3/lib/python3.7/site-packages/PySimpleGUI/PySimpleGUI.py", line 11200, in ConvertFlexToTK
+    MyFlexForm.TKroot.configure(padx=MyFlexForm.Margins[0], pady=MyFlexForm.Margins[1])
+  File "/opt/anaconda3/lib/python3.7/tkinter/__init__.py", line 1485, in configure
+    return self._configure('configure', cnf, kw)
+  File "/opt/anaconda3/lib/python3.7/tkinter/__init__.py", line 1476, in _configure
+    self.tk.call(_flatten((self._w, cmd)) + self._options(cnf))
+_tkinter.TclError: bad screen distance "a"
+

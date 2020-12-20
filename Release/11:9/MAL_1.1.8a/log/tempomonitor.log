@@ -1,0 +1,411 @@
+2020-09-11 15:42:09 WARNING Traceback (most recent call last):
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1284, in _execute_context
+    cursor, statement, parameters, context
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+cx_Oracle.DatabaseError: ORA-00904: "TECH04"."QTDATA_THOMAS": invalid identifier
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "./popup_tempo.py", line 548, in run_popup_monitor
+    .format(utils.db_tempomonitor, str_checkname, utils.db_tempomonitor), utils.ENGINE)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/pandas/io/sql.py", line 397, in read_sql
+    chunksize=chunksize)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/pandas/io/sql.py", line 1099, in read_query
+    result = self.execute(*args)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/pandas/io/sql.py", line 990, in execute
+    return self.connectable.execute(*args, **kwargs)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 2244, in execute
+    return connection.execute(statement, *multiparams, **params)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1012, in execute
+    return self._execute_text(object_, multiparams, params)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1187, in _execute_text
+    parameters,
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1324, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1518, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1284, in _execute_context
+    cursor, statement, parameters, context
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.DatabaseError: (cx_Oracle.DatabaseError) ORA-00904: "TECH04"."QTDATA_THOMAS": invalid identifier
+[SQL: select * from qt_tempomonitor where to_char(NAME) in tech04.qtdata_Thomas and DATETIME in (select max(DATETIME) from qt_tempomonitor group by to_char(NAME))]
+(Background on this error at: http://sqlalche.me/e/4xp6)
+
+2020-09-11 15:43:12 WARNING Traceback (most recent call last):
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1284, in _execute_context
+    cursor, statement, parameters, context
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+cx_Oracle.DatabaseError: ORA-00904: "TECH04"."QTDATA_THOMAS": invalid identifier
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "./popup_tempo.py", line 548, in run_popup_monitor
+    .format(utils.db_tempomonitor, str_checkname, utils.db_tempomonitor), utils.ENGINE)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/pandas/io/sql.py", line 397, in read_sql
+    chunksize=chunksize)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/pandas/io/sql.py", line 1099, in read_query
+    result = self.execute(*args)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/pandas/io/sql.py", line 990, in execute
+    return self.connectable.execute(*args, **kwargs)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 2244, in execute
+    return connection.execute(statement, *multiparams, **params)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1012, in execute
+    return self._execute_text(object_, multiparams, params)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1187, in _execute_text
+    parameters,
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1324, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1518, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1284, in _execute_context
+    cursor, statement, parameters, context
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.DatabaseError: (cx_Oracle.DatabaseError) ORA-00904: "TECH04"."QTDATA_THOMAS": invalid identifier
+[SQL: select * from qt_tempomonitor where to_char(NAME) in tech04.qtdata_Thomas and DATETIME in (select max(DATETIME) from qt_tempomonitor group by to_char(NAME))]
+(Background on this error at: http://sqlalche.me/e/4xp6)
+
+2020-09-11 15:43:54 WARNING Traceback (most recent call last):
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1284, in _execute_context
+    cursor, statement, parameters, context
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+cx_Oracle.DatabaseError: ORA-00904: "TECH04"."QTDATA_THOMAS": invalid identifier
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "./popup_tempo.py", line 548, in run_popup_monitor
+    .format(utils.db_tempomonitor, str_checkname, utils.db_tempomonitor), utils.ENGINE)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/pandas/io/sql.py", line 397, in read_sql
+    chunksize=chunksize)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/pandas/io/sql.py", line 1099, in read_query
+    result = self.execute(*args)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/pandas/io/sql.py", line 990, in execute
+    return self.connectable.execute(*args, **kwargs)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 2244, in execute
+    return connection.execute(statement, *multiparams, **params)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1012, in execute
+    return self._execute_text(object_, multiparams, params)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1187, in _execute_text
+    parameters,
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1324, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1518, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1284, in _execute_context
+    cursor, statement, parameters, context
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.DatabaseError: (cx_Oracle.DatabaseError) ORA-00904: "TECH04"."QTDATA_THOMAS": invalid identifier
+[SQL: select * from qt_tempomonitor where to_char(NAME) in tech04.qtdata_Thomas and DATETIME in (select max(DATETIME) from qt_tempomonitor group by to_char(NAME))]
+(Background on this error at: http://sqlalche.me/e/4xp6)
+
+2020-09-11 15:47:55 WARNING Traceback (most recent call last):
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1284, in _execute_context
+    cursor, statement, parameters, context
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+cx_Oracle.DatabaseError: ORA-00904: "TECH04"."QTDATA_THOMAS": invalid identifier
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "./popup_tempo.py", line 548, in run_popup_monitor
+    .format(utils.db_tempomonitor, str_checkname, utils.db_tempomonitor), utils.ENGINE)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/pandas/io/sql.py", line 397, in read_sql
+    chunksize=chunksize)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/pandas/io/sql.py", line 1099, in read_query
+    result = self.execute(*args)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/pandas/io/sql.py", line 990, in execute
+    return self.connectable.execute(*args, **kwargs)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 2244, in execute
+    return connection.execute(statement, *multiparams, **params)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1012, in execute
+    return self._execute_text(object_, multiparams, params)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1187, in _execute_text
+    parameters,
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1324, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1518, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1284, in _execute_context
+    cursor, statement, parameters, context
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.DatabaseError: (cx_Oracle.DatabaseError) ORA-00904: "TECH04"."QTDATA_THOMAS": invalid identifier
+[SQL: select * from qt_tempomonitor where to_char(NAME) in tech04.qtdata_Thomas and DATETIME in (select max(DATETIME) from qt_tempomonitor group by to_char(NAME))]
+(Background on this error at: http://sqlalche.me/e/4xp6)
+
+2020-09-11 15:57:38 WARNING Traceback (most recent call last):
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1284, in _execute_context
+    cursor, statement, parameters, context
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+cx_Oracle.DatabaseError: ORA-00904: "TECH04"."QTDATA_THOMAS": invalid identifier
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "./popup_tempo.py", line 548, in run_popup_monitor
+    .format(utils.db_tempomonitor, str_checkname, utils.db_tempomonitor), utils.ENGINE)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/pandas/io/sql.py", line 397, in read_sql
+    chunksize=chunksize)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/pandas/io/sql.py", line 1099, in read_query
+    result = self.execute(*args)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/pandas/io/sql.py", line 990, in execute
+    return self.connectable.execute(*args, **kwargs)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 2244, in execute
+    return connection.execute(statement, *multiparams, **params)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1012, in execute
+    return self._execute_text(object_, multiparams, params)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1187, in _execute_text
+    parameters,
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1324, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1518, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1284, in _execute_context
+    cursor, statement, parameters, context
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.DatabaseError: (cx_Oracle.DatabaseError) ORA-00904: "TECH04"."QTDATA_THOMAS": invalid identifier
+[SQL: select * from qt_tempomonitor where to_char(NAME) in tech04.qtdata_Thomas and DATETIME in (select max(DATETIME) from qt_tempomonitor group by to_char(NAME))]
+(Background on this error at: http://sqlalche.me/e/4xp6)
+
+2020-09-15 08:02:04 WARNING              DATETIME                  NAME  ...         NEXTACT OUTCOME
+0 2020-09-15 08:02:03  tech04.qtdata_Thomas  ...  test MAL - MAL    None
+
+[1 rows x 21 columns]
+2020-09-15 08:02:34 WARNING              DATETIME                  NAME  ...               NEXTACT OUTCOME
+0 2020-09-15 08:02:33  tech04.qtdata_Thomas  ...  call aLinh - Interns    None
+
+[1 rows x 21 columns]
+2020-09-15 08:02:55 WARNING              DATETIME                   NAME  ...               NEXTACT OUTCOME
+0 2020-09-14 12:48:49  project04.qtdata_Kien  ...             test code   doing
+1 2020-09-15 08:02:33   tech04.qtdata_Thomas  ...  call aLinh - Interns    None
+
+[2 rows x 21 columns]
+2020-09-15 08:03:25 WARNING              DATETIME                   NAME  ...               NEXTACT OUTCOME
+0 2020-09-14 12:48:49  project04.qtdata_Kien  ...             test code   doing
+1 2020-09-15 08:03:03   tech04.qtdata_Thomas  ...  call aLinh - Interns    None
+
+[2 rows x 21 columns]
+2020-09-15 08:32:17 WARNING              DATETIME                   NAME  ...                 NEXTACT OUTCOME
+0 2020-09-15 08:09:12  project04.qtdata_Kien  ...               test code   doing
+1 2020-09-15 08:08:21   tech04.qtdata_Thomas  ...  discuss team web - WEB    None
+
+[2 rows x 21 columns]
+2020-09-15 08:32:47 WARNING              DATETIME                   NAME  ...         NEXTACT OUTCOME
+0 2020-09-15 08:09:12  project04.qtdata_Kien  ...       test code   doing
+1 2020-09-15 08:32:20   tech04.qtdata_Thomas  ...  test MAL - MAL    None
+
+[2 rows x 21 columns]
+2020-09-15 08:33:18 WARNING              DATETIME                   NAME  ...         NEXTACT OUTCOME
+0 2020-09-15 08:09:12  project04.qtdata_Kien  ...       test code   doing
+1 2020-09-15 08:32:50   tech04.qtdata_Thomas  ...  test MAL - MAL    None
+
+[2 rows x 21 columns]
+2020-09-15 08:33:39 WARNING              DATETIME                   NAME  ...             NEXTACT OUTCOME
+0 2020-09-15 08:09:12  tech25.qtdata_Mr.hung  ...  tim hieu ve nodejs   doing
+1 2020-09-15 08:33:22  tech25.qtdata_Mr.hung  ...  tim hieu ve nodejs   doing
+2 2020-09-15 08:09:12  project04.qtdata_Kien  ...           test code   doing
+3 2020-09-15 08:32:50   tech04.qtdata_Thomas  ...      test MAL - MAL    None
+4 2020-09-15 08:33:19   tech04.qtdata_Thomas  ...      test MAL - MAL    None
+
+[5 rows x 21 columns]
+2020-09-15 08:38:35 WARNING              DATETIME  ...                                             WEBCAM
+0 2020-09-15 08:09:12  ...  iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAIAAAD/gAIDAA...
+1 2020-09-15 08:09:12  ...  iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAIAAAD/gAIDAA...
+2 2020-09-15 08:34:19  ...  iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAIAAAD/gAIDAA...
+3 2020-09-15 08:38:05  ...  iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAIAAAD/gAIDAA...
+4 2020-09-15 08:38:30  ...  iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAIAAAD/gAIDAA...
+
+[5 rows x 5 columns]
+2020-09-16 22:38:15 WARNING Traceback (most recent call last):
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1284, in _execute_context
+    cursor, statement, parameters, context
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+cx_Oracle.NotSupportedError: Python value of type Image not supported.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "./popup_tempo.py", line 115, in capture_images
+    df_monitor.to_sql('QT_TEMPOMONITOR_TEST', utils.ENGINE, if_exists = 'append', index = False)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/pandas/core/generic.py", line 2531, in to_sql
+    dtype=dtype, method=method)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/pandas/io/sql.py", line 460, in to_sql
+    chunksize=chunksize, dtype=dtype, method=method)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/pandas/io/sql.py", line 1174, in to_sql
+    table.insert(chunksize, method=method)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/pandas/io/sql.py", line 686, in insert
+    exec_insert(conn, keys, chunk_iter)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/pandas/io/sql.py", line 599, in _execute_insert
+    conn.execute(self.table.insert(), data)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1020, in execute
+    return meth(self, multiparams, params)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/sql/elements.py", line 298, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1139, in _execute_clauseelement
+    distilled_params,
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1324, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1518, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1284, in _execute_context
+    cursor, statement, parameters, context
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.NotSupportedError: (cx_Oracle.NotSupportedError) Python value of type Image not supported.
+[SQL: INSERT INTO "QT_TEMPOMONITOR_TEST" ("DATETIME", "NAME", "SCREEN", "TIME", "WEBCAM") VALUES (:DATETIME, :NAME, :SCREEN, :TIME, :WEBCAM)]
+[parameters: {'NAME': 'tech04.qtdata_Thomas', 'DATETIME': datetime.datetime(2020, 9, 16, 22, 38, 14, 728990), 'WEBCAM': <PIL.Image.Image image mode=RGB size=100x100 at 0x1295102B0>, 'SCREEN': <PIL.Image.Image image mode=RGB size=100x100 at 0x129510AC8>, 'TIME': '22:38:14'}]
+(Background on this error at: http://sqlalche.me/e/tw8g)
+
+2020-09-16 22:38:45 WARNING Traceback (most recent call last):
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1284, in _execute_context
+    cursor, statement, parameters, context
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+cx_Oracle.NotSupportedError: Python value of type Image not supported.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "./popup_tempo.py", line 115, in capture_images
+    df_monitor.to_sql('QT_TEMPOMONITOR_TEST', utils.ENGINE, if_exists = 'append', index = False)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/pandas/core/generic.py", line 2531, in to_sql
+    dtype=dtype, method=method)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/pandas/io/sql.py", line 460, in to_sql
+    chunksize=chunksize, dtype=dtype, method=method)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/pandas/io/sql.py", line 1174, in to_sql
+    table.insert(chunksize, method=method)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/pandas/io/sql.py", line 686, in insert
+    exec_insert(conn, keys, chunk_iter)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/pandas/io/sql.py", line 599, in _execute_insert
+    conn.execute(self.table.insert(), data)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1020, in execute
+    return meth(self, multiparams, params)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/sql/elements.py", line 298, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1139, in _execute_clauseelement
+    distilled_params,
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1324, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1518, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1284, in _execute_context
+    cursor, statement, parameters, context
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.NotSupportedError: (cx_Oracle.NotSupportedError) Python value of type Image not supported.
+[SQL: INSERT INTO "QT_TEMPOMONITOR_TEST" ("DATETIME", "NAME", "SCREEN", "TIME", "WEBCAM") VALUES (:DATETIME, :NAME, :SCREEN, :TIME, :WEBCAM)]
+[parameters: {'NAME': 'tech04.qtdata_Thomas', 'DATETIME': datetime.datetime(2020, 9, 16, 22, 38, 44, 921014), 'WEBCAM': <PIL.Image.Image image mode=RGB size=100x100 at 0x13A25F7B8>, 'SCREEN': <PIL.Image.Image image mode=RGB size=100x100 at 0x137923860>, 'TIME': '22:38:44'}]
+(Background on this error at: http://sqlalche.me/e/tw8g)
+
+2020-09-16 22:39:15 WARNING Traceback (most recent call last):
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1284, in _execute_context
+    cursor, statement, parameters, context
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+cx_Oracle.NotSupportedError: Python value of type Image not supported.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "./popup_tempo.py", line 115, in capture_images
+    df_monitor.to_sql('QT_TEMPOMONITOR_TEST', utils.ENGINE, if_exists = 'append', index = False)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/pandas/core/generic.py", line 2531, in to_sql
+    dtype=dtype, method=method)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/pandas/io/sql.py", line 460, in to_sql
+    chunksize=chunksize, dtype=dtype, method=method)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/pandas/io/sql.py", line 1174, in to_sql
+    table.insert(chunksize, method=method)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/pandas/io/sql.py", line 686, in insert
+    exec_insert(conn, keys, chunk_iter)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/pandas/io/sql.py", line 599, in _execute_insert
+    conn.execute(self.table.insert(), data)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1020, in execute
+    return meth(self, multiparams, params)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/sql/elements.py", line 298, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1139, in _execute_clauseelement
+    distilled_params,
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1324, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1518, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1284, in _execute_context
+    cursor, statement, parameters, context
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.NotSupportedError: (cx_Oracle.NotSupportedError) Python value of type Image not supported.
+[SQL: INSERT INTO "QT_TEMPOMONITOR_TEST" ("DATETIME", "NAME", "SCREEN", "TIME", "WEBCAM") VALUES (:DATETIME, :NAME, :SCREEN, :TIME, :WEBCAM)]
+[parameters: {'NAME': 'tech04.qtdata_Thomas', 'DATETIME': datetime.datetime(2020, 9, 16, 22, 39, 15, 128418), 'WEBCAM': <PIL.Image.Image image mode=RGB size=100x100 at 0x129510358>, 'SCREEN': <PIL.Image.Image image mode=RGB size=100x100 at 0x1379230F0>, 'TIME': '22:39:15'}]
+(Background on this error at: http://sqlalche.me/e/tw8g)
+
+2020-09-16 22:39:44 WARNING Traceback (most recent call last):
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1284, in _execute_context
+    cursor, statement, parameters, context
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+cx_Oracle.NotSupportedError: Python value of type Image not supported.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "./popup_tempo.py", line 115, in capture_images
+    df_monitor.to_sql('QT_TEMPOMONITOR_TEST', utils.ENGINE, if_exists = 'append', index = False)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/pandas/core/generic.py", line 2531, in to_sql
+    dtype=dtype, method=method)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/pandas/io/sql.py", line 460, in to_sql
+    chunksize=chunksize, dtype=dtype, method=method)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/pandas/io/sql.py", line 1174, in to_sql
+    table.insert(chunksize, method=method)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/pandas/io/sql.py", line 686, in insert
+    exec_insert(conn, keys, chunk_iter)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/pandas/io/sql.py", line 599, in _execute_insert
+    conn.execute(self.table.insert(), data)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1020, in execute
+    return meth(self, multiparams, params)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/sql/elements.py", line 298, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1139, in _execute_clauseelement
+    distilled_params,
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1324, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1518, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1284, in _execute_context
+    cursor, statement, parameters, context
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.NotSupportedError: (cx_Oracle.NotSupportedError) Python value of type Image not supported.
+[SQL: INSERT INTO "QT_TEMPOMONITOR_TEST" ("DATETIME", "NAME", "SCREEN", "TIME", "WEBCAM") VALUES (:DATETIME, :NAME, :SCREEN, :TIME, :WEBCAM)]
+[parameters: {'NAME': 'tech04.qtdata_Thomas', 'DATETIME': datetime.datetime(2020, 9, 16, 22, 39, 44, 828480), 'WEBCAM': <PIL.Image.Image image mode=RGB size=100x100 at 0x13A329FD0>, 'SCREEN': <PIL.Image.Image image mode=RGB size=100x100 at 0x13A329E48>, 'TIME': '22:39:44'}]
+(Background on this error at: http://sqlalche.me/e/tw8g)
+

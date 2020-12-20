@@ -1,0 +1,5 @@
+2020-09-02 14:58:02 WARNING Traceback (most recent call last):
+  File "./popup_tempo.py", line 91, in capture_images
+    if time.time() > monitor_start + timer_monitor or popup_first_run:
+KeyboardInterrupt
+

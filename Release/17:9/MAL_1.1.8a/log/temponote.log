@@ -1,0 +1,48 @@
+2020-09-18 08:43:03 WARNING Cannot capture images!
+2020-09-18 08:43:03 WARNING Traceback (most recent call last):
+  File "<ipython-input-5-79018f751c8e>", line 35, in snapshot
+    frame_b64 = encode_b64(frame)
+NameError: name 'encode_b64' is not defined
+
+2020-09-18 08:46:09 WARNING Cannot capture images!
+2020-09-18 08:46:09 WARNING Traceback (most recent call last):
+  File "<ipython-input-8-ae3b627aad0c>", line 33, in snapshot
+    cv2.imshow("test", frame)
+TypeError: Expected Ptr<cv::UMat> for argument 'mat'
+
+2020-09-18 08:46:48 WARNING Cannot capture images!
+2020-09-18 08:46:48 WARNING Traceback (most recent call last):
+  File "<ipython-input-10-acf69f4fef46>", line 33, in snapshot
+    cv2.imshow("test", frame)
+TypeError: Expected Ptr<cv::UMat> for argument 'mat'
+
+2020-09-18 08:47:10 WARNING Cannot capture images!
+2020-09-18 08:47:10 WARNING Traceback (most recent call last):
+  File "<ipython-input-10-acf69f4fef46>", line 33, in snapshot
+    cv2.imshow("test", frame)
+TypeError: Expected Ptr<cv::UMat> for argument 'mat'
+
+2020-09-18 08:51:41 WARNING Cannot capture images!
+2020-09-18 08:51:41 WARNING Traceback (most recent call last):
+  File "<ipython-input-14-dd1c64a8cc25>", line 33, in snapshot
+    cv2.imshow("test", frame)
+TypeError: Expected Ptr<cv::UMat> for argument 'mat'
+
+2020-09-18 08:54:01 WARNING Cannot capture images!
+2020-09-18 08:54:01 WARNING Traceback (most recent call last):
+  File "<ipython-input-18-759d6ff7ef1f>", line 32, in <module>
+    cv2.imshow("test", frame)
+TypeError: Expected Ptr<cv::UMat> for argument 'mat'
+
+2020-09-18 08:54:13 WARNING Cannot capture images!
+2020-09-18 08:54:13 WARNING Traceback (most recent call last):
+  File "<ipython-input-19-e6924fd1ec2a>", line 33, in snapshot
+    cv2.imshow("test", frame)
+TypeError: Expected Ptr<cv::UMat> for argument 'mat'
+
+2020-09-18 08:55:29 WARNING Cannot capture images!
+2020-09-18 08:55:29 WARNING Traceback (most recent call last):
+  File "<ipython-input-21-b62486809208>", line 33, in snapshot
+    cv2.imshow("test", frame)
+TypeError: Expected Ptr<cv::UMat> for argument 'mat'
+

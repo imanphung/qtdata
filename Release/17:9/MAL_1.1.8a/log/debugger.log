@@ -1,0 +1,9 @@
+2020-09-17 22:19:33 WARNING Traceback (most recent call last):
+  File "./debugger.py", line 73, in run_popup_debugger
+    window.Element('-OUT-').update('{}\n'.format(result))
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/PySimpleGUI/PySimpleGUI.py", line 2694, in Update
+    self._TKOut.output.delete('1.0', tk.END)
+  File "/Users/phungan/anaconda/lib/python3.5/tkinter/__init__.py", line 2985, in delete
+    self.tk.call(self._w, 'delete', index1, index2)
+_tkinter.TclError: invalid command name ".5228629296.5228664256.5228664872.5228664816"
+

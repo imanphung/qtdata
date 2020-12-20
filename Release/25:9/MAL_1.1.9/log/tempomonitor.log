@@ -1,0 +1,130 @@
+2020-10-28 16:24:49 WARNING Traceback (most recent call last):
+  File "/Users/phungan/opt/anaconda3/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1276, in _execute_context
+    self.dialect.do_execute(
+  File "/Users/phungan/opt/anaconda3/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 593, in do_execute
+    cursor.execute(statement, parameters)
+cx_Oracle.DatabaseError: ORA-00942: table or view does not exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "./popup_tempo.py", line 638, in run_team_popup
+    get_code('qt-BOD')
+  File "./popup_tempo.py", line 810, in get_code
+    df = pd.read_sql(" SELECT CODE FROM {} WHERE  DEPARTMENT  LIKE '{}'".format(utils.db_memberinfo, name), utils.ENGINE)
+  File "/Users/phungan/opt/anaconda3/lib/python3.8/site-packages/pandas/io/sql.py", line 432, in read_sql
+    return pandas_sql.read_query(
+  File "/Users/phungan/opt/anaconda3/lib/python3.8/site-packages/pandas/io/sql.py", line 1218, in read_query
+    result = self.execute(*args)
+  File "/Users/phungan/opt/anaconda3/lib/python3.8/site-packages/pandas/io/sql.py", line 1087, in execute
+    return self.connectable.execute(*args, **kwargs)
+  File "/Users/phungan/opt/anaconda3/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 2235, in execute
+    return connection.execute(statement, *multiparams, **params)
+  File "/Users/phungan/opt/anaconda3/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1003, in execute
+    return self._execute_text(object_, multiparams, params)
+  File "/Users/phungan/opt/anaconda3/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1172, in _execute_text
+    ret = self._execute_context(
+  File "/Users/phungan/opt/anaconda3/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1316, in _execute_context
+    self._handle_dbapi_exception(
+  File "/Users/phungan/opt/anaconda3/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1510, in _handle_dbapi_exception
+    util.raise_(
+  File "/Users/phungan/opt/anaconda3/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/Users/phungan/opt/anaconda3/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1276, in _execute_context
+    self.dialect.do_execute(
+  File "/Users/phungan/opt/anaconda3/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 593, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.DatabaseError: (cx_Oracle.DatabaseError) ORA-00942: table or view does not exist
+[SQL:  SELECT CODE FROM cmt_memberinfo WHERE  DEPARTMENT  LIKE 'qt-BOD']
+(Background on this error at: http://sqlalche.me/e/13/4xp6)
+
+2020-10-28 16:25:11 WARNING Traceback (most recent call last):
+  File "/Users/phungan/opt/anaconda3/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1276, in _execute_context
+    self.dialect.do_execute(
+  File "/Users/phungan/opt/anaconda3/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 593, in do_execute
+    cursor.execute(statement, parameters)
+cx_Oracle.DatabaseError: ORA-00942: table or view does not exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "./popup_tempo.py", line 638, in run_team_popup
+    get_code('qt-BOD')
+  File "./popup_tempo.py", line 810, in get_code
+    df = pd.read_sql(" SELECT CODE FROM {} WHERE  DEPARTMENT  LIKE '{}'".format(utils.db_memberinfo, name), utils.ENGINE)
+  File "/Users/phungan/opt/anaconda3/lib/python3.8/site-packages/pandas/io/sql.py", line 432, in read_sql
+    return pandas_sql.read_query(
+  File "/Users/phungan/opt/anaconda3/lib/python3.8/site-packages/pandas/io/sql.py", line 1218, in read_query
+    result = self.execute(*args)
+  File "/Users/phungan/opt/anaconda3/lib/python3.8/site-packages/pandas/io/sql.py", line 1087, in execute
+    return self.connectable.execute(*args, **kwargs)
+  File "/Users/phungan/opt/anaconda3/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 2235, in execute
+    return connection.execute(statement, *multiparams, **params)
+  File "/Users/phungan/opt/anaconda3/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1003, in execute
+    return self._execute_text(object_, multiparams, params)
+  File "/Users/phungan/opt/anaconda3/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1172, in _execute_text
+    ret = self._execute_context(
+  File "/Users/phungan/opt/anaconda3/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1316, in _execute_context
+    self._handle_dbapi_exception(
+  File "/Users/phungan/opt/anaconda3/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1510, in _handle_dbapi_exception
+    util.raise_(
+  File "/Users/phungan/opt/anaconda3/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/Users/phungan/opt/anaconda3/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1276, in _execute_context
+    self.dialect.do_execute(
+  File "/Users/phungan/opt/anaconda3/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 593, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.DatabaseError: (cx_Oracle.DatabaseError) ORA-00942: table or view does not exist
+[SQL:  SELECT CODE FROM cmt_memberinfo WHERE  DEPARTMENT  LIKE 'qt-BOD']
+(Background on this error at: http://sqlalche.me/e/13/4xp6)
+
+2020-10-28 16:46:40 WARNING Traceback (most recent call last):
+  File "/Users/phungan/opt/anaconda3/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1276, in _execute_context
+    self.dialect.do_execute(
+  File "/Users/phungan/opt/anaconda3/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 593, in do_execute
+    cursor.execute(statement, parameters)
+cx_Oracle.DatabaseError: ORA-00942: table or view does not exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "./popup_tempo.py", line 638, in run_team_popup
+    get_code('qt-BOD')
+  File "./popup_tempo.py", line 811, in get_code
+    df = pd.read_sql(" SELECT CODE FROM {} WHERE  DEPARTMENT  LIKE '{}'".format(utils.db_memberinfo, name), utils.ENGINE)
+  File "/Users/phungan/opt/anaconda3/lib/python3.8/site-packages/pandas/io/sql.py", line 432, in read_sql
+    return pandas_sql.read_query(
+  File "/Users/phungan/opt/anaconda3/lib/python3.8/site-packages/pandas/io/sql.py", line 1218, in read_query
+    result = self.execute(*args)
+  File "/Users/phungan/opt/anaconda3/lib/python3.8/site-packages/pandas/io/sql.py", line 1087, in execute
+    return self.connectable.execute(*args, **kwargs)
+  File "/Users/phungan/opt/anaconda3/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 2235, in execute
+    return connection.execute(statement, *multiparams, **params)
+  File "/Users/phungan/opt/anaconda3/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1003, in execute
+    return self._execute_text(object_, multiparams, params)
+  File "/Users/phungan/opt/anaconda3/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1172, in _execute_text
+    ret = self._execute_context(
+  File "/Users/phungan/opt/anaconda3/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1316, in _execute_context
+    self._handle_dbapi_exception(
+  File "/Users/phungan/opt/anaconda3/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1510, in _handle_dbapi_exception
+    util.raise_(
+  File "/Users/phungan/opt/anaconda3/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/Users/phungan/opt/anaconda3/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1276, in _execute_context
+    self.dialect.do_execute(
+  File "/Users/phungan/opt/anaconda3/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 593, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.DatabaseError: (cx_Oracle.DatabaseError) ORA-00942: table or view does not exist
+[SQL:  SELECT CODE FROM cmt_memberinfo WHERE  DEPARTMENT  LIKE 'qt-BOD']
+(Background on this error at: http://sqlalche.me/e/13/4xp6)
+
+2020-11-03 15:54:13 WARNING Traceback (most recent call last):
+  File "./popup_tempo.py", line 117, in capture_images
+    date = utils.current_date.strftime('%Y-%m-%d').strftime('%d-%b-%y').upper()
+AttributeError: 'str' object has no attribute 'strftime'
+
+2020-11-03 15:54:43 WARNING Traceback (most recent call last):
+  File "./popup_tempo.py", line 117, in capture_images
+    date = utils.current_date.strftime('%Y-%m-%d').strftime('%d-%b-%y').upper()
+AttributeError: 'str' object has no attribute 'strftime'
+

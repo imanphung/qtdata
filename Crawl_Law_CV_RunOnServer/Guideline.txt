@@ -1,0 +1,10 @@
+==========================================================================================================
+
+1. Login tại https://nhanlucnganhluat.vn/tai-khoan/dang-nhap-tai-khoan.html?dangNhapCongTy=1&viewArea=ntd
+	-> User: info.qtdata@gmail.com
+	-> Password: qttuyendung
+	
+2. Về trang chủ chọn ngành nghề, khu vực, người lao động
+	-> sau đó copy URL dán vào file URL.txt -> Ctrl+s để save lại
+
+3. Chạy file Run.sh -> tool yêu cầu password nhập: qtdata@2020

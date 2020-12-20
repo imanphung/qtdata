@@ -1,0 +1,28 @@
+"
+from datetime import datetime, timedelta, date
+today = date.today()
+def check_permission():
+	unlock_date = [4,5,6] # Fr,Sa,Su
+	if today.weekday() in unlock_date:
+		#open permission
+		print('open permission')
+		return True
+	else:
+		#close permission
+		print('close permission')
+		return False
+"
+"
+from datetime import datetime, timedelta, date
+today = date.today()
+def check_permission():
+	unlock_date = [4,5,6] # Fr,Sa,Su
+	if today.weekday() in unlock_date:
+		#open permission
+		print('open permission')
+		return True
+	else:
+		#close permission
+		print('close permission')
+		return False
+"

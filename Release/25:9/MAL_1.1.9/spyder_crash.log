@@ -1,0 +1,22 @@
+Traceback (most recent call last):
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/spyder/app/mainwindow.py", line 2998, in main
+    mainwindow = run_spyder(app, options, args)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/spyder/app/mainwindow.py", line 2902, in run_spyder
+    main.setup()
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/spyder/app/mainwindow.py", line 793, in setup
+    from spyder.plugins.help import Help
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/spyder/plugins/help.py", line 33, in <module>
+    from spyder.utils.help.sphinxify import (CSS_PATH, generate_context,
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/spyder/utils/help/sphinxify.py", line 29, in <module>
+    from docutils.utils import SystemMessage as SystemMessage
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/docutils/utils/__init__.py", line 20, in <module>
+    import docutils.io
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/docutils/io.py", line 18, in <module>
+    from docutils.utils.error_reporting import locale_encoding, ErrorString, ErrorOutput
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/docutils/utils/error_reporting.py", line 47, in <module>
+    locale_encoding = locale.getlocale()[1] or locale.getdefaultlocale()[1]
+  File "/Users/phungan/anaconda/lib/python3.5/locale.py", line 577, in getlocale
+    return _parse_localename(localename)
+  File "/Users/phungan/anaconda/lib/python3.5/locale.py", line 486, in _parse_localename
+    raise ValueError('unknown locale: %s' % localename)
+ValueError: unknown locale: UTF-8

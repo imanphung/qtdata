@@ -1,0 +1,190 @@
+2020-09-11 15:42:09 WARNING Traceback (most recent call last):
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1284, in _execute_context
+    cursor, statement, parameters, context
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+cx_Oracle.DatabaseError: ORA-00904: "TECH04"."QTDATA_THOMAS": invalid identifier
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "./popup_tempo.py", line 548, in run_popup_monitor
+    .format(utils.db_tempomonitor, str_checkname, utils.db_tempomonitor), utils.ENGINE)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/pandas/io/sql.py", line 397, in read_sql
+    chunksize=chunksize)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/pandas/io/sql.py", line 1099, in read_query
+    result = self.execute(*args)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/pandas/io/sql.py", line 990, in execute
+    return self.connectable.execute(*args, **kwargs)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 2244, in execute
+    return connection.execute(statement, *multiparams, **params)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1012, in execute
+    return self._execute_text(object_, multiparams, params)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1187, in _execute_text
+    parameters,
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1324, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1518, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1284, in _execute_context
+    cursor, statement, parameters, context
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.DatabaseError: (cx_Oracle.DatabaseError) ORA-00904: "TECH04"."QTDATA_THOMAS": invalid identifier
+[SQL: select * from qt_tempomonitor where to_char(NAME) in tech04.qtdata_Thomas and DATETIME in (select max(DATETIME) from qt_tempomonitor group by to_char(NAME))]
+(Background on this error at: http://sqlalche.me/e/4xp6)
+
+2020-09-11 15:43:12 WARNING Traceback (most recent call last):
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1284, in _execute_context
+    cursor, statement, parameters, context
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+cx_Oracle.DatabaseError: ORA-00904: "TECH04"."QTDATA_THOMAS": invalid identifier
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "./popup_tempo.py", line 548, in run_popup_monitor
+    .format(utils.db_tempomonitor, str_checkname, utils.db_tempomonitor), utils.ENGINE)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/pandas/io/sql.py", line 397, in read_sql
+    chunksize=chunksize)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/pandas/io/sql.py", line 1099, in read_query
+    result = self.execute(*args)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/pandas/io/sql.py", line 990, in execute
+    return self.connectable.execute(*args, **kwargs)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 2244, in execute
+    return connection.execute(statement, *multiparams, **params)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1012, in execute
+    return self._execute_text(object_, multiparams, params)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1187, in _execute_text
+    parameters,
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1324, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1518, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1284, in _execute_context
+    cursor, statement, parameters, context
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.DatabaseError: (cx_Oracle.DatabaseError) ORA-00904: "TECH04"."QTDATA_THOMAS": invalid identifier
+[SQL: select * from qt_tempomonitor where to_char(NAME) in tech04.qtdata_Thomas and DATETIME in (select max(DATETIME) from qt_tempomonitor group by to_char(NAME))]
+(Background on this error at: http://sqlalche.me/e/4xp6)
+
+2020-09-11 15:43:54 WARNING Traceback (most recent call last):
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1284, in _execute_context
+    cursor, statement, parameters, context
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+cx_Oracle.DatabaseError: ORA-00904: "TECH04"."QTDATA_THOMAS": invalid identifier
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "./popup_tempo.py", line 548, in run_popup_monitor
+    .format(utils.db_tempomonitor, str_checkname, utils.db_tempomonitor), utils.ENGINE)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/pandas/io/sql.py", line 397, in read_sql
+    chunksize=chunksize)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/pandas/io/sql.py", line 1099, in read_query
+    result = self.execute(*args)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/pandas/io/sql.py", line 990, in execute
+    return self.connectable.execute(*args, **kwargs)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 2244, in execute
+    return connection.execute(statement, *multiparams, **params)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1012, in execute
+    return self._execute_text(object_, multiparams, params)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1187, in _execute_text
+    parameters,
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1324, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1518, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1284, in _execute_context
+    cursor, statement, parameters, context
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.DatabaseError: (cx_Oracle.DatabaseError) ORA-00904: "TECH04"."QTDATA_THOMAS": invalid identifier
+[SQL: select * from qt_tempomonitor where to_char(NAME) in tech04.qtdata_Thomas and DATETIME in (select max(DATETIME) from qt_tempomonitor group by to_char(NAME))]
+(Background on this error at: http://sqlalche.me/e/4xp6)
+
+2020-09-11 15:47:55 WARNING Traceback (most recent call last):
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1284, in _execute_context
+    cursor, statement, parameters, context
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+cx_Oracle.DatabaseError: ORA-00904: "TECH04"."QTDATA_THOMAS": invalid identifier
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "./popup_tempo.py", line 548, in run_popup_monitor
+    .format(utils.db_tempomonitor, str_checkname, utils.db_tempomonitor), utils.ENGINE)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/pandas/io/sql.py", line 397, in read_sql
+    chunksize=chunksize)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/pandas/io/sql.py", line 1099, in read_query
+    result = self.execute(*args)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/pandas/io/sql.py", line 990, in execute
+    return self.connectable.execute(*args, **kwargs)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 2244, in execute
+    return connection.execute(statement, *multiparams, **params)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1012, in execute
+    return self._execute_text(object_, multiparams, params)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1187, in _execute_text
+    parameters,
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1324, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1518, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1284, in _execute_context
+    cursor, statement, parameters, context
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.DatabaseError: (cx_Oracle.DatabaseError) ORA-00904: "TECH04"."QTDATA_THOMAS": invalid identifier
+[SQL: select * from qt_tempomonitor where to_char(NAME) in tech04.qtdata_Thomas and DATETIME in (select max(DATETIME) from qt_tempomonitor group by to_char(NAME))]
+(Background on this error at: http://sqlalche.me/e/4xp6)
+
+2020-09-11 15:57:38 WARNING Traceback (most recent call last):
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1284, in _execute_context
+    cursor, statement, parameters, context
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+cx_Oracle.DatabaseError: ORA-00904: "TECH04"."QTDATA_THOMAS": invalid identifier
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "./popup_tempo.py", line 548, in run_popup_monitor
+    .format(utils.db_tempomonitor, str_checkname, utils.db_tempomonitor), utils.ENGINE)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/pandas/io/sql.py", line 397, in read_sql
+    chunksize=chunksize)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/pandas/io/sql.py", line 1099, in read_query
+    result = self.execute(*args)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/pandas/io/sql.py", line 990, in execute
+    return self.connectable.execute(*args, **kwargs)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 2244, in execute
+    return connection.execute(statement, *multiparams, **params)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1012, in execute
+    return self._execute_text(object_, multiparams, params)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1187, in _execute_text
+    parameters,
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1324, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1518, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1284, in _execute_context
+    cursor, statement, parameters, context
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.DatabaseError: (cx_Oracle.DatabaseError) ORA-00904: "TECH04"."QTDATA_THOMAS": invalid identifier
+[SQL: select * from qt_tempomonitor where to_char(NAME) in tech04.qtdata_Thomas and DATETIME in (select max(DATETIME) from qt_tempomonitor group by to_char(NAME))]
+(Background on this error at: http://sqlalche.me/e/4xp6)
+

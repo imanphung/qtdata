@@ -1,0 +1,92 @@
+2020-09-25 10:10:52 WARNING Traceback (most recent call last):
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/pool/base.py", line 817, in _checkout
+    raise exc.InvalidatePoolError()
+sqlalchemy.exc.InvalidatePoolError: ()
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 2345, in _wrap_pool_connect
+    return fn()
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/pool/base.py", line 364, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/pool/base.py", line 847, in _checkout
+    fairy._connection_record._checkin_failed(err)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/util/langhelpers.py", line 69, in __exit__
+    exc_value, with_traceback=exc_tb,
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/pool/base.py", line 843, in _checkout
+    fairy._connection_record.get_connection()
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/pool/base.py", line 610, in get_connection
+    self.__connect()
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/pool/base.py", line 661, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/util/langhelpers.py", line 69, in __exit__
+    exc_value, with_traceback=exc_tb,
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/pool/base.py", line 656, in __connect
+    connection = pool._invoke_creator(self)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/strategies.py", line 114, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/default.py", line 490, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+cx_Oracle.DatabaseError: ORA-12170: TNS:Connect timeout occurred
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "./popup_tempo.py", line 113, in capture_images
+    df_monitor.to_sql(utils.db_tempomonitor, utils.ENGINE, if_exists = 'append', index = False)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/pandas/core/generic.py", line 2531, in to_sql
+    dtype=dtype, method=method)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/pandas/io/sql.py", line 460, in to_sql
+    chunksize=chunksize, dtype=dtype, method=method)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/pandas/io/sql.py", line 1173, in to_sql
+    table.create()
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/pandas/io/sql.py", line 572, in create
+    if self.exists():
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/pandas/io/sql.py", line 560, in exists
+    return self.pd_sql.has_table(self.name, self.schema)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/pandas/io/sql.py", line 1201, in has_table
+    schema or self.meta.schema,
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 2220, in run_callable
+    with self._contextual_connect() as conn:
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 2311, in _contextual_connect
+    self._wrap_pool_connect(self.pool.connect, None),
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 2349, in _wrap_pool_connect
+    e, dialect, self
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1591, in _handle_dbapi_exception_noconnection
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 2345, in _wrap_pool_connect
+    return fn()
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/pool/base.py", line 364, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/pool/base.py", line 847, in _checkout
+    fairy._connection_record._checkin_failed(err)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/util/langhelpers.py", line 69, in __exit__
+    exc_value, with_traceback=exc_tb,
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/pool/base.py", line 843, in _checkout
+    fairy._connection_record.get_connection()
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/pool/base.py", line 610, in get_connection
+    self.__connect()
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/pool/base.py", line 661, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/util/langhelpers.py", line 69, in __exit__
+    exc_value, with_traceback=exc_tb,
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/pool/base.py", line 656, in __connect
+    connection = pool._invoke_creator(self)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/strategies.py", line 114, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/Users/phungan/anaconda/lib/python3.5/site-packages/sqlalchemy/engine/default.py", line 490, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+sqlalchemy.exc.DatabaseError: (cx_Oracle.DatabaseError) ORA-12170: TNS:Connect timeout occurred
+(Background on this error at: http://sqlalche.me/e/4xp6)
+
