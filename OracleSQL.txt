@@ -1,77 +1,79 @@
-==========================================================
-					Import MarketData
-==========================================================
-1. Create TABLESPACE:
-CMD> sqlplus / as sysdba
+OracleDB basic
+I. Setup OracleDB on docker
 
-+ SSAMLFILE: A sSAMlfile tablespace is a traditional Oracle tablespace, which can contain 1022 datafiles or tempfiles, each of which can contain up to approximately 4 million (222) blocks.
-	SQL> CREATE TABLESPACE MARKETDB
-		DATAFILE 'D:\oracle\oradata\ORCL\MARKETDB01.DBF' 
-    		SIZE 1024M
-    		AUTOEXTEND ON NEXT 100M MAXSIZE 32000M;
+Guideline https://github.com/oracle/docker-images/tree/master/OracleDatabase/SingleInstance
+Chú ý các parameters khi build docker, cần điền đúng và đủ như hướng dẫn hoặc làm theo hướng dẫn phía dưới (-v chọn 19.3)
 
-+ BIGFILE: A bigfile tablespace contains only one datafile or tempfile, which can contain up to approximately 4 billion (232) blocks. The maximum size of the single datafile or tempfile is 128 terabytes (TB) for a tablespace with 32K blocks and 32TB for a tablespace with 8K blocks.
-	SQL> CREATE BIGFILE TABLESPACE QTDATADB
-		DATAFILE '/opt/oracle/oradata/ORCLCDB/QTDATADB.DBF' 
-    		SIZE 10G
-    		AUTOEXTEND ON NEXT 100G MAXSIZE 2T;
+Chú ý directory mount data.
 
+Chú ý You will have to provide the installation binaries of Oracle Database (except for Oracle Database 18c XE) and put them into the dockerfiles/19.3.0 folder. You only need to provide the binaries for the edition you are going to install. The binaries can be downloaded from the Oracle Technology Network, make sure you use the linux link: https://www.oracle.com/database/technologies/oracle-database-software-downloads.html -> Download Linux x86-64 to run the image
 
-+ EDIT TABLESPACE
-	SQL> ALTER TABLESPACE QTDATADB
- 		ADD DATAFILE '/u01/app/oracle/oradata/ORCLCDB/QTDATADB.DBF'
-   		SIZE 1024M
-   		AUTOEXTEND ON;
+1 Building an image: cd docker-images/OracleDatabase/SingleInstance/dockerfiles ./buildDockerImage.sh -v 19.3.0 -e
 
-2. Create user:
-alter session set "_ORACLE_SCRIPT"=true;  
+2 Create a new volume contains all data of the database: docker volume create oracledb19c-vol chmod -R a+w /var/lib/docker/volumes/oracledb19c-vol Toàn bộ data sẽ chứa trong đây /var/lib/docker/volumes/oracledb19c-vol/
+
+3 Run the container: docker run --name oracledb19c -p 1521:1521 -p 5500:5500 -e ORACLE_SID=ORCLCDB -e ORACLE_PDB=ORCLCDB1 -e ORACLE_PWD=qtdatA2020 -e INIT_SGA_SIZE=8000 -e INIT_PGA_SIZE=2000 -e ORACLE_EDITION=enterprise -v oracledb19c-vol:/opt/oracle/oradata oracle/database:19.3.0-ee
+
+II. Create TableSpace and User
+
+SSH to docker sudo docker exec -it oracledb19c bash Command in docker: sqlplus sys/qtdatA2020@ORCLCDB as sysdba sqlplus system/qtdatA2020@ORCLCDB
+Create TABLESPACE:
+SMALLFILE: A smallfile tablespace is a traditional Oracle tablespace, which can contain 1022 datafiles or tempfiles, each of which can contain up to approximately 4 million (222) blocks.
+
+SQL> CREATE TABLESPACE QTDATADB
+	DATAFILE '/opt/oracle/oradata/ORCLCDB/QTDATA.DBF'
+		SIZE 1024M
+		AUTOEXTEND ON NEXT 100M MAXSIZE 32000M;
+BIGFILE: A bigfile tablespace contains only one datafile or tempfile, which can contain up to approximately 4 billion (232) blocks. The maximum size of the single datafile or tempfile is 128 terabytes (TB) for a tablespace with 32K blocks and 32TB for a tablespace with 8K blocks.
+
+SQL> CREATE BIGFILE TABLESPACE QTDATADB
+	DATAFILE '/opt/oracle/oradata/ORCLCDB/QTDATA.DBF'
+		SIZE 10G
+		AUTOEXTEND ON NEXT 100G MAXSIZE 300G;
+Edit TABLESPACE
+
+SQL> ALTER TABLESPACE QTDATADB
+	ADD DATAFILE '/opt/oracle/oradata/ORCLCDB/QTDATA.DBF'
+	SIZE 1024M
+	AUTOEXTEND ON;
+Create user:
+SQL> alter session set "_ORACLE_SCRIPT"=true; cho phép đặt tên theo ý mình
+
 SQL> create user SAM identified by qtdatA2020 default tablespace QTDATADB account unlock;
 
-3. Provide roles:
-SQL> GRANT CONNECT,RESOURCE,DBA TO SAM;
+Provide roles: SQL> GRANT CONNECT,RESOURCE,DBA TO SAM;
 
-4. Provide privileges:
-SQL> GRANT CREATE SESSION, GRANT ANY PRIVILEGE TO SAM;
-SQL> GRANT UNLIMITED TABLESPACE TO SAM;
+Provide privileges: SQL> GRANT CREATE SESSION, GRANT ANY PRIVILEGE TO SAM; SQL> GRANT UNLIMITED TABLESPACE TO SAM;
 
 Or
 
 SQL> GRANT ALL PRIVILEGES TO SAM;
 
-5. Create directory:
+Create directory:
+SQL> CREATE OR REPLACE DIRECTORY IMP_DIR AS '/home/oracle'; SQL> GRANT READ, WRITE ON DIRECTORY IMP_DIR TO SAM; SQL> grant unlimited tablespace to SAM;
 
-SQL> CREATE OR REPLACE DIRECTORY IMP_DIR AS '/home/oracle';
-SQL> GRANT READ, WRITE ON DIRECTORY IMP_DIR TO SAM;
-SQL> grant unlimited tablespace to SAM;
+'/home/oracle' là nơi chứa data khi để ngoài chỗ mount.
 
-4. Import data from dump file:
-
+Import data from dump file:
 CMD> impdp HRMS/qtdatA2020 tables=IGN_STOCK_INFO_HIS,IGN_DERIVATIVES_INFO_HIS,HOSTOCKINFOHIS,HOSTOCK directory=IMP_DIR dumpfile= QTDATADB.DBF logfile=impQTDATADB.log
 
-----------SQL----------
-1. Check user info:
-SQL> SELECT * FROM all_users
-SQL> SELECT * FROM dba_users
-SQL> SELECT * FROM user_users
+III. SQL execution
 
-2. Check table info:
-SQL> SELECT table_name FROM all_tables
-SQL> SELECT table_name FROM dba_tables
-SQL> SELECT table_name FROM user_tables
+Check user info: SQL> SELECT * FROM all_users SQL> SELECT * FROM dba_users SQL> SELECT * FROM user_users
 
-3. Check free space on tablespace:
-SQL> SELECT TABLESPACE_NAME,SUM(BYTES)/1024/1024/1024 "FREE SPACE(GB)"
-	FROM DBA_FREE_SPACE GROUP BY TABLESPACE_NAME;
+Check table info: SQL> SELECT table_name FROM all_tables SQL> SELECT table_name FROM dba_tables SQL> SELECT table_name FROM user_tables
 
-4. Check table size:
-SQL> select bytes from user_segments where segment_name like 'table_name'
-Check segments size
-SQL> select owner, sum(bytes)/1024/1024 Size_MB from dba_segments group by owner
-	
-5. Check table column:
-SQL> SELECT column_name
-FROM user_tab_cols
-WHERE table_name = 'table_name'
+Check free space on tablespace: SQL> SELECT TABLESPACE_NAME,SUM(BYTES)/1024/1024/1024 "FREE SPACE(GB)" FROM DBA_FREE_SPACE GROUP BY TABLESPACE_NAME;
+
+Check table size: SQL> select bytes from user_segments where segment_name like 'table_name' Check segments size SQL> select owner, sum(bytes)/1024/1024 Size_MB from dba_segments group by owner
+
+Check table column: SQL> SELECT column_name FROM user_tab_cols WHERE table_name = 'table_name'
+
+Check maximum connection select current_utilization, limit_value from v$resource_limit where resource_name='sessions';
+
+Check Connection pooling and The number of sessions currently active SQL> SELECT * FROM V$SESSION WHERE PROGRAM IS NOT NULL; SQL> SELECT COUNT(*) FROM v$session
+
+Stop all sessions are running SQL> ALTER SYSTEM ENABLE RESTRICTED SESSION;
 
 https://technology.amis.nl/2017/12/30/oracle-database-in-a-docker-container-from-oracle-container-registry/
 
